@@ -1,0 +1,1 @@
+nodemon --exec "ssgr.exe -v src docs" --ext "*" --watch src
