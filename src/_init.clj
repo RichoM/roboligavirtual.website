@@ -82,6 +82,9 @@
 (defn render
   [{:keys [type] :as element} rendered]
   (case type
+    :ssgr.doc/emphasis
+    (assoc rendered 0 :span.text-danger)
+    
     :ssgr.doc/heading
     (update rendered 0 #(keyword (subs (str % ".pt-2.my-4") 1)))
 
