@@ -58,8 +58,8 @@
            menu)]]]])
 
 (def footer
-  [:div.container-fluid.pt-4
-   [:footer.d-flex.flex-wrap.justify-content-between.align-items-center.py-3.my-4.border-top
+  [:div.container-fluid.border-top.pt-4.my-4
+   [:footer.d-flex.flex-wrap.justify-content-between.align-items-center
     [:div.col-md-4.mb-3.mb-md-0.text-body-secondary
      "Copyright ©2021 Roboliga Virtual, All Rights Reserved"]
     [:ul.nav.col-md-4.justify-content-end.list-unstyled.d-flex
@@ -81,15 +81,20 @@
     [:link {:rel "stylesheet" :href "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
             :integrity "sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
             :crossorigin "anonymous"}]
-    [:link {:rel "stylesheet" :href "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"}]
+    [:link {:rel "stylesheet" :href "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      :integrity "sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      :crossorigin "anonymous" :referrerpolicy "no-referrer"}]
     [:link {:rel "stylesheet" :href "style.css"}]]
    [:body
     (navbar file-name)
-    [:div.container document]
+    (case file-name
+      "index.html" document
+      [:div.container document])
     footer
     [:script {:src "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
               :integrity "sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-              :crossorigin "anonymous"}]]])
+              :crossorigin "anonymous"}]
+    [:script {:src "script.js"}]]])
 
 (defn md->html [file-name]
   (-> file-name

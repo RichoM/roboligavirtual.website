@@ -1,0 +1,101 @@
+[:div#carousel.carousel.slide.pb-2 {:data-bs-ride "carousel"}
+ [:div.carousel-indicators
+  [:button.active {:type "button"
+                   :data-bs-target "#carousel"
+                   :data-bs-slide-to "0"
+                   :aria-current "true"
+                   :aria-label "Slide 1"}]
+  [:button {:type "button"
+            :data-bs-target "#carousel"
+            :data-bs-slide-to "1"
+            :aria-label "Slide 2"}]
+  [:button {:type "button"
+            :data-bs-target "#carousel"
+            :data-bs-slide-to "2"
+            :aria-label "Slide 3"}]]
+ [:div.carousel-inner
+  [:div.carousel-item.active
+   [:img.d-block.w-100 {:src "imgs/sumo.png" :alt "Sumo robótico"}]
+   [:div.carousel-caption.text-white.d-none.d-md-block
+    [:h1 "Sumo Robótico"]
+    [:p "Some representative placeholder content for the first slide."]]]
+  [:div.carousel-item
+   [:img.d-block.w-100 {:src "imgs/futbol.png" :alt "Fútbol de robots"}]
+   [:div.carousel-caption.d-none.d-md-block
+    [:h1 "Fútbol de robots"]
+    [:p "Some representative placeholder content for the second slide."]]]
+  [:div.carousel-item
+   [:img.d-block.w-100 {:src "imgs/rescate.png" :alt "Rescate simulado"}]
+   [:div.carousel-caption.d-none.d-md-block
+    [:h1 "Rescate simulado"]
+    [:p "Some representative placeholder content for the third slide."]]]]
+ [:button.carousel-control-prev {:type "button"
+                                 :data-bs-target "#carousel"
+                                 :data-bs-slide "prev"}
+  [:span.carousel-control-prev-icon {:aria-hidden "true"}]
+  [:span.visually-hidden "Previous"]]
+ [:button.carousel-control-next {:type "button"
+                                 :data-bs-target "#carousel"
+                                 :data-bs-slide "next"}
+  [:span.carousel-control-next-icon {:aria-hidden "true"}]
+  [:span.visually-hidden "Next"]]]
+
+[:div.py-4.text-center.fs-3.bg-black
+ [:p "¿Quieres defender el Primer Puesto en Rescue Sim en Robocup 2025? ¡No dejes de inscribirte en Rescate!"]
+ [:img.w-50 {:src "imgs/rescuesim.png"}]] 
+
+
+[:div.py-4.text-center.fs-2.bg-black
+ [:div.container
+  [:p (ssgr/markdown "__¡YA ESTÁ ABIERTA LA INSCRIPCIÓN!__")]
+  [:p "¡Podés entrar a un nuevo mundo presionando este "
+   [:a.btn.btn-primary {:href "https://forms.gle/yzXEzFLuhfFW8Frv5" :role "button"} "botón"] "!"]
+  [:p (ssgr/markdown "___LA INSCRIPCIÓN CIERRA EL VIERNES 30/8 A LAS 23:59 (UTC -3)___")]
+  [:p (ssgr/markdown "_TODA LA INFORMACION SE PROVEERA POR EL SERVIDOR DE DISCORD. \\
+Por lo tanto, sumate YA al [Discord de la Roboliga](https://discord.com/invite/SZ24uFV6sq)_")]]]
+
+
+
+[:div.container
+ [:div.row.featurette
+  [:div.col-md-6
+   [:h2.featurette-heading.fw-normal.lh-1
+    "Campeonato por rondas"]
+   [:h2.text-body-secondary "¡Siempre hay otra oportunidad!"]
+   [:p.lead
+    "No importa cómo te fue en la ronda anterior. Podrás ver los partidos de tu zona y mejorar tus robots semana a semana."]]
+  [:div.col-md-6
+   [:img.w-100 {:src "imgs/codigopython.png"}]]]]
+
+[:hr]
+
+[:div.container.text-center.py-5
+ [:div.row
+  [:div.col-lg-4
+   [:i.fa-solid.fa-cake-candles.fa-4x]
+   [:h2.mt-2.fw-normal "Categorías por edad"]
+   [:p
+    (ssgr/markdown "__Sumo__ \\
+Infantiles: 9 a 12 años (edad del integrante mayor)
+Juveniles: 13 a 18 años (edad del integrante mayor)
+Libre: ¡para todas las edades!
+
+__Fútbol y Rescate__ \\
+Categoría general única para todas las edades")]]
+
+  [:div.col-lg-4
+   [:i.fa-solid.fa-code.fa-4x]
+   [:h2.mt-2.fw-normal "Diferentes lenguajes"]
+   [:p
+    (ssgr/markdown "En Sumo, podés programar en Python. Si todavía no aprendiste a programar, ¡no te preocupes! También podés dirigir a tu robot mediante bloques, mientras ves cómo sería el mismo código en Python.
+
+En Rescate, también programarás en Python, pero con todas las librerías que deses para potenciar tu robot.
+
+Y en Fútbol, ¡vas a poder usar el lenguaje que quieras!")]]
+
+  [:div.col-lg-4
+   [:i.fa-solid.fa-wrench.fa-4x]
+   [:h2.mt-2.fw-normal "Ambiente realista"]
+   [:p.pt-2
+    (ssgr/markdown "Si vamos a simular, ¡que parezca lo más real posible! El ambiente de simulación está montado sobre un motor físico con rozamiento, colisiones, etc. ¡Los robots vuelcan, se enganchan, se levantan! Como en el mundo real...")]]]]
+
