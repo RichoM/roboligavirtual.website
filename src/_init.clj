@@ -62,7 +62,7 @@
            menu)]]]])
 
 (defn apply-layout [document file-name]
-  [:html {:lang "en"}
+  [:html {:lang "en" :data-bs-theme "dark"}
    [:head
     [:title title]
     [:meta {:charset "utf-8"}]
