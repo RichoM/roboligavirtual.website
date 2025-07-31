@@ -13,7 +13,7 @@
                  "Fútbol"  "tutoriales_futbol.html"
                  "Rescate" "tutoriales_rescate.html"}
    "Descargas" "descargas.html"
-   "CALENDARIO Y RESULTADOS" "calendario.html"
+   "Calendario" "calendario.html"
    "Preguntas" "faq.html"})
 
 (defn navbar-button [file-name [name value]]
