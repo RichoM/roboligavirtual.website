@@ -1,8 +1,50 @@
 (require '[ssgr :refer [register-callback!]])
+(require '[clojure.string :as str])
 
 (def title "Roboliga Virtual")
 
-(defn navbar []
+(def menu
+  {"Inicio" "index.html"
+   "Reglamento" {"Sumo" "reglamentos_sumo.html"
+                 "Fútbol" "reglamentos_futbol.html"
+                 "Rescate" "reglamentos_rescate.html"}
+   "Tutoriales" {"Sumo"    "tutoriales_sumo.html"
+                 "Fútbol"  "tutoriales_futbol.html"
+                 "Rescate" "tutoriales_rescate.html"}
+   "Descargas" "descargas.html"
+   "CALENDARIO Y RESULTADOS" "calendario.html"
+   "Preguntas" "faq.html"})
+
+(defn md->html [file-name]
+  (-> file-name
+      (str/replace #"^src[/\\]" "")
+      (str/replace #".(clj)?md$" ".html")))
+
+(defn navbar-button [file-name [name value]]
+  (if (string? value)
+    (let [current? (= file-name value)]
+      [:li.nav-item
+       [:a.nav-link (cond-> {:href value}
+                      current? (assoc :aria-current "page"
+                                      :class "active"))
+        name]])
+    (let [current? (contains? (set (vals value)) 
+                              file-name)]
+      [:li.nav-item.dropdown
+       [:a.nav-link.dropdown-toggle
+        (cond-> {:href "#" :role "button" :data-bs-toggle "dropdown"
+                 :aria-expanded "false"}
+          current? (assoc :aria-current "page"
+                          :class "active"))
+        name]
+       (apply conj [:ul.dropdown-menu]
+              (map (fn [[k v]]
+                     [:li
+                      [:a.dropdown-item {:href v}
+                       k]])
+                   value))])))
+
+(defn navbar [file-name]
   [:nav.navbar.navbar-expand-lg.bg-body-tertiary
    [:div.container-fluid
     [:a.navbar-brand {:href "#"} title]
@@ -15,48 +57,10 @@
      [:span.navbar-toggler-icon]]
     [:div#navbarNavDropdown.collapse.navbar-collapse.justify-content-end
      [:ul.navbar-nav
-      [:li.nav-item
-       [:a.nav-link.active {:aria-current "page" :href "#"}
-        "Inicio"]]
-      [:li.nav-item.dropdown
-       [:a.nav-link.dropdown-toggle
-        {:href "#" :role "button" :data-bs-toggle "dropdown" :aria-expanded "false"}
-        "Reglamento"]
-       [:ul.dropdown-menu
-        [:li
-         [:a.dropdown-item {:href "reglamentos_sumo"}
-          "Sumo"]]
-        [:li
-         [:a.dropdown-item {:href "reglamentos_futbol"}
-          "Fútbol"]]
-        [:li
-         [:a.dropdown-item {:href "reglamentos_rescate"}
-          "Rescate"]]]]
-      [:li.nav-item.dropdown
-       [:a.nav-link.dropdown-toggle
-        {:href "#" :role "button" :data-bs-toggle "dropdown" :aria-expanded "false"}
-        "Tutoriales"]
-       [:ul.dropdown-menu
-        [:li
-         [:a.dropdown-item {:href "tutoriales_sumo"}
-          "Sumo"]]
-        [:li
-         [:a.dropdown-item {:href "tutoriales_futbol"}
-          "Fútbol"]]
-        [:li
-         [:a.dropdown-item {:href "tutoriales_rescate"}
-          "Rescate"]]]]
-      [:li.nav-item
-       [:a.nav-link {:href "descargas"}
-        "Descargas"]]
-      [:li.nav-item
-       [:a.nav-link {:href "calendario"}
-        "CALENDARIO Y RESULTADOS"]]
-      [:li.nav-item
-       [:a.nav-link {:href "faq"}
-        "Preguntas"]]]]]])
+      (map (partial navbar-button file-name)
+           menu)]]]])
 
-(defn apply-layout [document]
+(defn apply-layout [document file-name]
   [:html {:lang "en"}
    [:head
     [:title title]
@@ -68,7 +72,7 @@
     [:link {:rel "stylesheet" :href "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"}]
     [:link {:rel "stylesheet" :href "style.css"}]]
    [:body
-    (navbar)
+    (navbar file-name)
     document
     [:script {:src "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
               :integrity "sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
@@ -77,7 +81,9 @@
 (defn render
   [{:keys [type] :as element} rendered]
   (case type
-    :ssgr.doc/document (apply-layout rendered)
+    :ssgr.doc/document
+    (let [file-name (md->html (-> element meta :file))]
+      (apply-layout rendered file-name))
     rendered))
 
 (register-callback! render)
