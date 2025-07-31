@@ -1,4 +1,5 @@
 (require '[ssgr :refer [register-callback!]])
+(require '[ssgr.token :as t])
 (require '[clojure.string :as str])
 
 (def title "Roboliga Virtual")
@@ -99,7 +100,11 @@
   [{:keys [type] :as element} rendered]
   (case type
     :ssgr.doc/emphasis
-    (assoc rendered 0 :span.text-danger)
+    (let [char (-> element meta :token t/input-value first)]
+      (assoc rendered 0
+             (if (= \* char)
+               :span.text-success
+               :span.text-danger)))
     
     :ssgr.doc/heading
     (update rendered 0 #(keyword (subs (str % ".pt-2.my-4") 1)))
