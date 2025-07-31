@@ -46,9 +46,9 @@
                    value))])))
 
 (defn navbar [file-name]
-  [:nav.navbar.navbar-expand-lg.bg-body-tertiary
+  [:nav.navbar.navbar-expand-lg.bg-body-tertiary.sticky-top
    [:div.container-fluid
-    [:a.navbar-brand {:href "#"} title]
+    [:a.navbar-brand {:href "index.html"} title]
     [:button.navbar-toggler {:type "button"
                              :data-bs-toggle "collapse"
                              :data-bs-target "#navbarNavDropdown"
@@ -83,10 +83,8 @@
   [{:keys [type] :as element} rendered]
   (case type
     :ssgr.doc/heading
-    (if (= 1 (:level element))
-      (assoc rendered 0 :h1.pt-2.my-4)
-      rendered)
-    
+    (update rendered 0 #(keyword (subs (str % ".pt-2.my-4") 1)))
+
     :ssgr.doc/document
     (let [file-name (md->html (-> element meta :file))]
       (apply-layout rendered file-name))
