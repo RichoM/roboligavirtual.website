@@ -61,6 +61,21 @@
       (map (partial navbar-button file-name)
            menu)]]]])
 
+(def footer
+  [:div.container-fluid.pt-4
+   [:footer.d-flex.flex-wrap.justify-content-between.align-items-center.py-3.my-4.border-top
+    [:div.col-md-4.mb-3.mb-md-0.text-body-secondary
+     "Copyright ©2021 Roboliga Virtual, All Rights Reserved"]
+    [:ul.nav.col-md-4.justify-content-end.list-unstyled.d-flex
+     [:li.ms-1
+      [:a.text-body-secondary {:target "_blank" :href "http://www.facebook.com/Roboliga"}
+       [:i.fa-brands.fa-facebook.fa-2x.fa-fw]]]
+     [:li.ms-1
+      [:a.text-body-secondary
+       {:target "_blank"
+        :href "http://www.youtube.com/channel/UC-0P2S8oH9xz2GwEWj160dw"}
+       [:i.fa-brands.fa-youtube.fa-2x.fa-fw]]]]]])
+
 (defn apply-layout [document file-name]
   [:html {:lang "en" :data-bs-theme "dark"}
    [:head
@@ -75,6 +90,7 @@
    [:body
     (navbar file-name)
     [:div.container document]
+    footer
     [:script {:src "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
               :integrity "sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
               :crossorigin "anonymous"}]]])
