@@ -24,9 +24,10 @@
   (if (string? value)
     (let [current? (= file-name value)]
       [:li.nav-item
-       [:a.nav-link (cond-> {:href value}
-                      current? (assoc :aria-current "page"
-                                      :class "active"))
+       [:a.nav-link
+        (cond-> {:href value}
+          current? (assoc :aria-current "page"
+                          :class "active"))
         name]])
     (let [current? (contains? (set (vals value)) 
                               file-name)]
@@ -73,7 +74,7 @@
     [:link {:rel "stylesheet" :href "style.css"}]]
    [:body
     (navbar file-name)
-    document
+    [:div.container document]
     [:script {:src "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
               :integrity "sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
               :crossorigin "anonymous"}]]])
@@ -81,6 +82,11 @@
 (defn render
   [{:keys [type] :as element} rendered]
   (case type
+    :ssgr.doc/heading
+    (if (= 1 (:level element))
+      (assoc rendered 0 :h1.pt-2.my-4)
+      rendered)
+    
     :ssgr.doc/document
     (let [file-name (md->html (-> element meta :file))]
       (apply-layout rendered file-name))
