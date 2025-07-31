@@ -16,11 +16,6 @@
    "CALENDARIO Y RESULTADOS" "calendario.html"
    "Preguntas" "faq.html"})
 
-(defn md->html [file-name]
-  (-> file-name
-      (str/replace #"^src[/\\]" "")
-      (str/replace #".(clj)?md$" ".html")))
-
 (defn navbar-button [file-name [name value]]
   (if (string? value)
     (let [current? (= file-name value)]
@@ -96,18 +91,29 @@
               :integrity "sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
               :crossorigin "anonymous"}]]])
 
+(defn md->html [file-name]
+  (-> file-name
+      (str/replace #"^src[/\\]" "")
+      (str/replace #".(clj)?md$" ".html")))
+
+(defn add-class [html & classes]
+  (update html 0 (fn [tag] (keyword (subs (str/join "." (cons tag classes)) 1)))))
+
+(defn replace-tag [html tag]
+  (assoc html 0 tag))
+
 (defn render
   [{:keys [type] :as element} rendered]
   (case type
     :ssgr.doc/emphasis
-    (let [char (-> element meta :token t/input-value first)]
-      (assoc rendered 0
-             (if (= \* char)
-               :span.text-success
-               :span.text-danger)))
+    (let [char (-> element meta :token t/input-value first)
+          tag (if (= \* char)
+                :span.text-success
+                :span.text-danger)]
+      (replace-tag rendered tag))
     
     :ssgr.doc/heading
-    (update rendered 0 #(keyword (subs (str % ".pt-2.my-4") 1)))
+    (add-class rendered "pt-2" "my-4")
 
     :ssgr.doc/document
     (let [file-name (md->html (-> element meta :file))]
