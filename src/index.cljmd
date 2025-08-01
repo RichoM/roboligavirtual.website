@@ -1,5 +1,5 @@
 (require 'ssgr)
-(declare carousel carousel-slide featurette)
+(declare carousel carousel-slide featurette columns)
 
 (carousel
  (carousel-slide
@@ -41,33 +41,31 @@ Por lo tanto, sumate YA al [Discord de la Roboliga](https://discord.com/invite/S
 
 [:hr]
 
-[:div.container.text-center.py-5
- [:div.row
-  [:div.col-lg-4
-   [:i.fa-solid.fa-cake-candles.fa-4x]
-   [:h2.mt-2.fw-normal "Categorías por edad"]
-   [:p
-    (ssgr/markdown "__Sumo__ \\
+(columns
+ {:icon [:i.fa-solid.fa-cake-candles.fa-4x]
+  :title "Categorías por edad"
+  :content "__Sumo__ \\
 Infantiles: 9 a 12 años (edad del integrante mayor)
 Juveniles: 13 a 18 años (edad del integrante mayor)
 Libre: ¡para todas las edades!
 
 __Fútbol y Rescate__ \\
-Categoría general única para todas las edades")]]
+Categoría general única para todas las edades"}
 
-  [:div.col-lg-4
-   [:i.fa-solid.fa-code.fa-4x]
-   [:h2.mt-2.fw-normal "Diferentes lenguajes"]
-   [:p
-    (ssgr/markdown "En Sumo, podés programar en Python. Si todavía no aprendiste a programar, ¡no te preocupes! También podés dirigir a tu robot mediante bloques, mientras ves cómo sería el mismo código en Python.
+ {:icon [:i.fa-solid.fa-code.fa-4x]
+  :title "Diferentes lenguajes"
+  :content "En Sumo, podés programar en Python. Si todavía no aprendiste a programar, ¡no te preocupes! También podés dirigir a tu robot mediante bloques, mientras ves cómo sería el mismo código en Python.
 
 En Rescate, también programarás en Python, pero con todas las librerías que desees para potenciar tu robot.
 
-Y en Fútbol, ¡vas a poder usar el lenguaje que quieras!")]]
+Y en Fútbol, ¡vas a poder usar el lenguaje que quieras!"}
 
-  [:div.col-lg-4
-   [:i.fa-solid.fa-wrench.fa-4x]
-   [:h2.mt-2.fw-normal "Ambiente realista"]
-   [:p.pt-2
-    (ssgr/markdown "Si vamos a simular, ¡que parezca lo más real posible! El ambiente de simulación está montado sobre un motor físico con rozamiento, colisiones, etc. ¡Los robots vuelcan, se enganchan, se levantan! Como en el mundo real...")]]]]
+ {:icon [:i.fa-solid.fa-wrench.fa-4x]
+  :title "Ambiente realista"
+  :content "Si vamos a simular, ¡que parezca lo más real posible!
+
+El ambiente de simulación está montado sobre un motor físico con rozamiento, colisiones, etc. 
+
+¡Los robots vuelcan, se enganchan, se levantan! Como en el mundo real..."})
+
 

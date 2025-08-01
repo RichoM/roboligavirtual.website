@@ -50,3 +50,13 @@
        [:p.lead (ssgr/markdown content)])]
     [:div.col-md-6
      [:img.w-100 {:src img}]]]])
+
+(defn columns [& column-data]
+  [:div.container.text-center.py-5
+   [:div.row.justify-content-center
+    (map (fn [{:keys [icon title content]}]
+           [:div {:class (str "col-lg-" (int (/ 12 (count column-data))))}
+            icon
+            [:h2.mt-2.fw-normal (ssgr/markdown title)]
+            [:p (ssgr/markdown content)]])
+         column-data)]])
