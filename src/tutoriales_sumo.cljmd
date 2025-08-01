@@ -1,0 +1,35 @@
+(declare youtube-video)
+(defn separator [] [:div.py-4])
+
+# Tutoriales de Sumo
+
+En esta sección encontrarás videos y textos con diferentes tutoriales para programar tu robot de Sumo Virtual en forma sencilla.
+
+---
+
+(separator)
+
+## Preparando la cancha: ¿cómo instalar lo que necesito para el Sumo Virtual?
+
+(youtube-video "https://www.youtube.com/embed/wbqSfNl56QY?si=cvdT6-OnaCBLjId5")
+(separator)
+
+## Saliendo al ruedo: manejo del entorno de Sumo Robótico Virtual
+
+(youtube-video "https://www.youtube.com/embed/xJhUrLIlzgg?si=rZmRFtmtKzD5HFzI")
+(separator)
+
+## ¡A toda marcha!: nos lanzamos a programar nuestro robot
+
+(youtube-video "https://www.youtube.com/embed/pSYVhZYyVbU?si=LUOdkX_PxQ8xdEaq")
+(separator)
+
+## ¡Dale tu toque personal!: modificando la posición y rotación de los sensores de color de piso y de distancia
+
+(youtube-video "https://www.youtube.com/embed/MVYOuuL-HMU?si=L3sGthIG0wbC3A44")
+(separator)
+
+## Programación de Sumo Virtual con bloques
+
+(youtube-video "https://www.youtube.com/embed/nmAYXZ3-Uag?si=poLirdOJ8zjccOq4")
+(separator)

@@ -1,0 +1,25 @@
+(declare youtube-video)
+(defn separator [] [:div.py-4])
+
+# Tutoriales de Fútbol de Robots
+
+En esta sección encontrarás videos y textos con diferentes tutoriales para programar tu equipo de fútbol de robots en forma sencilla.
+
+---
+
+(separator)
+
+## Construyendo la cancha: Tutorial de instalación para Fútbol de Robots
+
+(youtube-video "https://www.youtube.com/embed/6IPsoLEqsLs?si=HIYaFwelUQYOdqDz")
+(separator)
+
+## Entrenamiento táctico: Manejo del entorno de Fútbol de robots
+
+(youtube-video "https://www.youtube.com/embed/4A3FRbkEbDA?si=dh5k5GmgU1t3z47k")
+(separator)
+
+## ¡Vibra el estadio!: Programación de un equipo de ejemplo para Fútbol de Robots
+
+(youtube-video "https://www.youtube.com/embed/TrJTqd_wEdE?si=v58gEMM97P1NQxJF")
+(separator)
