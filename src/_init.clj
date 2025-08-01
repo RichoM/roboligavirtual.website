@@ -58,7 +58,7 @@
            menu)]]]])
 
 (def footer
-  [:div.container-fluid.border-top.pt-4.my-4
+  [:div.container-fluid.border-top.pt-4.my-5
    [:footer.d-flex.flex-wrap.justify-content-between.align-items-center
     [:div.col-md-4.mb-3.mb-md-0.text-body-secondary
      "Copyright ©2021 Roboliga Virtual, All Rights Reserved"]
