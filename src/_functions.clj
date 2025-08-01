@@ -60,3 +60,13 @@
             [:h2.mt-2.fw-normal (ssgr/markdown title)]
             [:p (ssgr/markdown content)]])
          column-data)]])
+
+(defn youtube-video [embed-url]
+  [:p.video-container
+   [:iframe.w-100.h-100
+    {:src embed-url
+     :frameborder "0"
+     :allow
+     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     :referrerpolicy "strict-origin-when-cross-origin"
+     :allowfullscreen true}]])
