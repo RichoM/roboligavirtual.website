@@ -20,11 +20,11 @@
 
 
 [:div.py-4.text-center.fs-3.bg-black
- [:p "¿Quieres defender el Primer Puesto en Rescue Sim en Robocup 2025? ¡No dejes de inscribirte en Rescate!"]
+ [:p "¿Querés defender el Primer Puesto en Rescue Sim en Robocup 2025? ¡No dejes de inscribirte en Rescate!"]
  [:img.w-50 {:src "imgs/rescuesim.png"}]] 
 
 
-[:div.py-4.text-center.fs-2.bg-black
+[:div.py-4.text-center.fs-2.bg-dark-subtle.border-top.border-bottom
  [:div.container
   [:p (ssgr/markdown "__¡YA ESTÁ ABIERTA LA INSCRIPCIÓN!__")]
   [:p "¡Podés entrar a un nuevo mundo presionando este "
@@ -39,12 +39,12 @@ Por lo tanto, sumate YA al [Discord de la Roboliga](https://discord.com/invite/S
  :content "No importa cómo te fue en la ronda anterior. Podrás ver los partidos de tu zona y mejorar tus robots semana a semana."
  :img "imgs/codigopython.png")
 
-[:hr]
+[:div.container-fluid.border-top.border-bottom.pt-4.bg-dark-subtle
 
-(columns
- {:icon [:i.fa-solid.fa-cake-candles.fa-4x]
-  :title "Categorías por edad"
-  :content "__Sumo__ \\
+ (columns
+  {:icon [:i.fa-solid.fa-cake-candles.fa-4x]
+   :title "Categorías por edad"
+   :content "__Sumo__ \\
 Infantiles: 9 a 12 años (edad del integrante mayor)
 Juveniles: 13 a 18 años (edad del integrante mayor)
 Libre: ¡para todas las edades!
@@ -52,20 +52,21 @@ Libre: ¡para todas las edades!
 __Fútbol y Rescate__ \\
 Categoría general única para todas las edades"}
 
- {:icon [:i.fa-solid.fa-code.fa-4x]
-  :title "Diferentes lenguajes"
-  :content "En Sumo, podés programar en Python. Si todavía no aprendiste a programar, ¡no te preocupes! También podés dirigir a tu robot mediante bloques, mientras ves cómo sería el mismo código en Python.
+  {:icon [:i.fa-solid.fa-code.fa-4x]
+   :title "Diferentes lenguajes"
+   :content "En Sumo, podés programar en Python. Si todavía no aprendiste a programar, ¡no te preocupes! También podés dirigir a tu robot mediante bloques, mientras ves cómo sería el mismo código en Python.
 
 En Rescate, también programarás en Python, pero con todas las librerías que desees para potenciar tu robot.
 
 Y en Fútbol, ¡vas a poder usar el lenguaje que quieras!"}
 
- {:icon [:i.fa-solid.fa-wrench.fa-4x]
-  :title "Ambiente realista"
-  :content "Si vamos a simular, ¡que parezca lo más real posible!
+  {:icon [:i.fa-solid.fa-wrench.fa-4x]
+   :title "Ambiente realista"
+   :content "Si vamos a simular, ¡que parezca lo más real posible!
 
 El ambiente de simulación está montado sobre un motor físico con rozamiento, colisiones, etc. 
 
-¡Los robots vuelcan, se enganchan, se levantan! Como en el mundo real..."})
+¡Los robots vuelcan, se enganchan, se levantan! \\
+Como en el mundo real..."})]
 
 
