@@ -1,5 +1,5 @@
 (require 'ssgr)
-(declare carousel carousel-slide)
+(declare carousel carousel-slide featurette)
 
 (carousel
  (carousel-slide
@@ -33,16 +33,11 @@
   [:p (ssgr/markdown "_TODA LA INFORMACION SE PROVEERA POR EL SERVIDOR DE DISCORD. \\
 Por lo tanto, sumate YA al [Discord de la Roboliga](https://discord.com/invite/SZ24uFV6sq)_")]]]
 
-[:div.container
- [:div.row.featurette
-  [:div.col-md-6
-   [:h2.featurette-heading.fw-normal.lh-1
-    "Campeonato por rondas"]
-   [:h2.text-body-secondary "¡Siempre hay otra oportunidad!"]
-   [:p.lead
-    "No importa cómo te fue en la ronda anterior. Podrás ver los partidos de tu zona y mejorar tus robots semana a semana."]]
-  [:div.col-md-6
-   [:img.w-100 {:src "imgs/codigopython.png"}]]]]
+(featurette
+ :title "Campeonato por rondas"
+ :subtitle "¡Siempre hay otra oportunidad!"
+ :content "No importa cómo te fue en la ronda anterior. Podrás ver los partidos de tu zona y mejorar tus robots semana a semana."
+ :img "imgs/codigopython.png")
 
 [:hr]
 

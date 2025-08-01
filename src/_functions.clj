@@ -1,4 +1,5 @@
 (require '[clojure.string :as str])
+(require 'ssgr)
 
 (defn add-class [html & classes]
   (update html 0 (fn [tag] (keyword (subs (str/join "." (cons tag classes)) 1)))))
@@ -35,3 +36,17 @@
                                      :data-bs-slide "next"}
       [:span.carousel-control-next-icon {:aria-hidden "true"}]
       [:span.visually-hidden "Next"]]]))
+
+(defn featurette
+  [& {:keys [title subtitle content img]}]
+  [:div.container
+   [:div.row.featurette
+    [:div.col-md-6
+     (when title
+       [:h2.featurette-heading.fw-normal.lh-1 (ssgr/markdown title)])
+     (when subtitle
+       [:h2.text-body-secondary (ssgr/markdown subtitle)])
+     (when content
+       [:p.lead (ssgr/markdown content)])]
+    [:div.col-md-6
+     [:img.w-100 {:src img}]]]])
