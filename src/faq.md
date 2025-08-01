@@ -1,6 +1,6 @@
 # Preguntas frecuentes
 
-En esta página iremos publicando las consultas que nos vayan llegando (recomendamos leerlas por si ya se encuentra respondida)
+En esta página iremos publicando las consultas que nos vayan llegando al [discord de la Roboliga](https://discord.com/invite/SZ24uFV6sq) (recomendamos leerlas por si tu pregunta ya se encuentra respondida).
  
 __30/06/2022: ¿Dónde podemos conseguir más información sobre la programación del robot de Sumo?__ \
 ***Respuesta: ¡En la wiki de la Roboliga Virtual! [Link](https://github.com/gzabala/RoboligaVirtual/wiki/Sumo#documentaci%C3%B3n-sobre-la-clase-robotrl)***
