@@ -19,7 +19,7 @@
 (defn navbar-button [file-name [name value]]
   (if (string? value)
     (let [current? (= file-name value)]
-      [:li.nav-item
+      [:li.nav-item.mx-2
        [:a.nav-link
         (cond-> {:href value}
           current? (assoc :aria-current "page"
@@ -27,7 +27,7 @@
         name]])
     (let [current? (contains? (set (vals value)) 
                               file-name)]
-      [:li.nav-item.dropdown
+      [:li.nav-item.dropdown.mx-2
        [:a.nav-link.dropdown-toggle
         (cond-> {:href "#" :role "button" :data-bs-toggle "dropdown"
                  :aria-expanded "false"}
