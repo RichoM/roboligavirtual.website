@@ -5,9 +5,9 @@
   (update html 0 (fn [tag] (keyword (subs (str/join "." (cons tag classes)) 1)))))
 
 (defn carousel-slide [& {:keys [title subtitle img alt-text]}]
-  [:div.carousel-item.bg-body
+  [:div.carousel-item.bg-black
    [:img {:src img :alt alt-text
-          :style "width: 100%; height: auto; min-height: 450px; object-fit: cover;"}]
+          :style "width: 100%; height: auto; min-height: 500px; object-fit: cover;"}]
    [:div.carousel-caption.text-light.p-4.text-end
     {:style "filter:drop-shadow(5px 5px 10px #000000);"}
     [:h1.display-4.fw-bold (ssgr/markdown title)]
