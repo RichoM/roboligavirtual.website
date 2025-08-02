@@ -54,7 +54,7 @@
      (when content
        [:p.lead (ssgr/markdown content)])]
     [:div.col-md-6
-     [:img.w-100 {:src img}]]]])
+     [:img.w-100.rounded-3.shadow {:src img}]]]])
 
 (defn columns [& column-data]
   [:div.container.text-center.py-5
