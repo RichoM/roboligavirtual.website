@@ -63,7 +63,7 @@
            [:div {:class (str "col-lg-" (int (/ 12 (count column-data))))}
             icon
             [:h2.mt-2.fw-normal (ssgr/markdown title)]
-            [:p (ssgr/markdown content)]])
+            [:p (ssgr/markdown (str/join "\n\n" content))]])
          column-data)]])
 
 (defn youtube-video [embed-url]
