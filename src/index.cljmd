@@ -1,20 +1,25 @@
 (require 'ssgr)
+(require '[clojure.string :as str])
 (declare carousel carousel-slide featurette columns)
 
 (let [title "Roboliga Virtual 2024"
       subtitle "El primer campeonato latinoamericano de \\
                 Sumo, Fútbol Robótico y Rescate Robocup \\
-                para todas las edades"]
+                para todas las edades"
+      highlight #(str/replace %1 %2 "__$0__")]
   (carousel
    (carousel-slide
     :img "imgs/sumo.png" :alt-text "Sumo robótico"
-    :title title :subtitle subtitle)
+    :title title
+    :subtitle (highlight subtitle #"Sumo"))
    (carousel-slide
     :img "imgs/futbol.png" :alt-text "Fútbol de robots"
-    :title title :subtitle subtitle)
+    :title title
+    :subtitle (highlight subtitle #"Fútbol Robótico"))
    (carousel-slide
     :img "imgs/rescate.png" :alt-text "Rescate simulado"
-    :title title :subtitle subtitle)))
+    :title title
+    :subtitle (highlight subtitle #"Rescate Robocup"))))
 
 
 [:div.py-4.text-center.fs-3.bg-black
