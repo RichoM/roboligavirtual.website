@@ -23,7 +23,7 @@
        [:a.nav-link
         (cond-> {:href value}
           current? (assoc :aria-current "page"
-                          :class "active"))
+                          :class "active text-info"))
         name]])
     (let [current? (contains? (set (vals value)) 
                               file-name)]
@@ -32,7 +32,7 @@
         (cond-> {:href "#" :role "button" :data-bs-toggle "dropdown"
                  :aria-expanded "false"}
           current? (assoc :aria-current "page"
-                          :class "active"))
+                          :class "active text-info"))
         name]
        (apply conj [:ul.dropdown-menu]
               (map (fn [[k v]]
