@@ -45,7 +45,11 @@
   [:nav.navbar.navbar-expand-lg.sticky-top ;.bg-body-tertiary
    {:style "background-color: rgba(20, 20, 20, 1);"}
    [:div.container-fluid
-    [:a.navbar-brand {:href "index.html"} title]
+    [:a.navbar-brand {:href "index.html"} ;title
+     [:img.pe-3.align-bottom {:src "imgs/roboliga.png"
+                                :style "max-height: 45px;"}]
+     [:img.pe-3.align-bottom {:src "imgs/uainuevo.png"
+                                :style "max-height: 35px;"}]]
     [:button.navbar-toggler {:type "button"
                              :data-bs-toggle "collapse"
                              :data-bs-target "#navbarNavDropdown"
