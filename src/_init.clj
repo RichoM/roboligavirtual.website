@@ -42,7 +42,8 @@
                    value))])))
 
 (defn navbar [file-name]
-  [:nav.navbar.navbar-expand-lg.bg-body-tertiary.sticky-top
+  [:nav.navbar.navbar-expand-lg.sticky-top ;.bg-body-tertiary
+   {:style "background-color: rgba(20, 20, 20, 1);"}
    [:div.container-fluid
     [:a.navbar-brand {:href "index.html"} title]
     [:button.navbar-toggler {:type "button"
