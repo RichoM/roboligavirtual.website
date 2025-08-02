@@ -4,13 +4,18 @@
 (defn add-class [html & classes]
   (update html 0 (fn [tag] (keyword (subs (str/join "." (cons tag classes)) 1)))))
 
-(defn carousel-slide [& elements]
-  [:div.carousel-item
-   elements])
+(defn carousel-slide [& {:keys [title subtitle img alt-text]}]
+  [:div.carousel-item.bg-body
+   [:img {:src img :alt alt-text
+          :style "width: 100%; height: auto; min-height: 450px; object-fit: cover;"}]
+   [:div.carousel-caption.text-light.p-4.text-end
+    {:style "filter:drop-shadow(5px 5px 10px #000000);"}
+    [:h1.display-4.fw-bold (ssgr/markdown title)]
+    [:p.fs-3 (ssgr/markdown subtitle)]]])
 
 (defn carousel [& slides]
   (let [id (str "#carousel" (rand-int 1000))]
-    [(keyword (str "div" id ".carousel.slide.pb-2"))
+    [(keyword (str "div" id ".carousel.slide.carousel-fade.pb-2"))
      {:data-bs-ride "carousel"}
      (apply conj [:div.carousel-indicators]
             (map (fn [idx]

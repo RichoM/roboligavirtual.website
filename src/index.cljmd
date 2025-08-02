@@ -1,22 +1,20 @@
 (require 'ssgr)
 (declare carousel carousel-slide featurette columns)
 
-(carousel
- (carousel-slide
-  [:img.d-block.w-100 {:src "imgs/sumo.png" :alt "Sumo robótico"}]
-  [:div.carousel-caption.text-white.d-none.d-md-block
-   [:h1 "Sumo Robótico"]
-   [:p "Some representative placeholder content for the first slide."]])
- (carousel-slide
-  [:img.d-block.w-100 {:src "imgs/futbol.png" :alt "Fútbol de robots"}]
-  [:div.carousel-caption.d-none.d-md-block
-   [:h1 "Fútbol de robots"]
-   [:p "Some representative placeholder content for the second slide."]])
- (carousel-slide
-  [:img.d-block.w-100 {:src "imgs/rescate.png" :alt "Rescate simulado"}]
-  [:div.carousel-caption.d-none.d-md-block
-   [:h1 "Rescate simulado"]
-   [:p "Some representative placeholder content for the third slide."]]))
+(let [title "Roboliga Virtual 2024"
+      subtitle "El primer campeonato latinoamericano de \\
+                Sumo, Fútbol Robótico y Rescate Robocup \\
+                para todas las edades"]
+  (carousel
+   (carousel-slide
+    :img "imgs/sumo.png" :alt-text "Sumo robótico"
+    :title title :subtitle subtitle)
+   (carousel-slide
+    :img "imgs/futbol.png" :alt-text "Fútbol de robots"
+    :title title :subtitle subtitle)
+   (carousel-slide
+    :img "imgs/rescate.png" :alt-text "Rescate simulado"
+    :title title :subtitle subtitle)))
 
 
 [:div.py-4.text-center.fs-3.bg-black
