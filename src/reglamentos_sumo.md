@@ -28,7 +28,7 @@ Las características de la competencia con las siguientes:
 La entrega de los equipos debe realizarse de una de las siguientes formas:
 
 1. Si compite con el robot estándar, con un UNICO archivo de extensión .py.
-2. Si compute con un robot personalizado, con DOS archivos. Uno de extensión .py, y el otro de extensión .json. 
+2. Si compite con un robot personalizado, con DOS archivos. Uno de extensión .py, y el otro de extensión .json. 
  
 Estos equipos deben entregarse dentro de una carpeta de Google Drive QUE SE TE INFORMARÁ EL DÍA 06/09/2025. Todos los sábados a las 0:00 un sistema automático levantará el primer archivo .py que encuentre dentro de esa carpeta, y si hay personalización, el primer .json. Asegúrense de que hay un único archivo de cada extensión para que lo levante correctamente. _Aquellos equipos que no tengan archivos subidos para la primera ronda, quedarán automáticamente fuera de la competencia. __Por lo tanto, es fundamental que subas tu equipo.___
 
