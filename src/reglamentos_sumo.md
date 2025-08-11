@@ -9,8 +9,8 @@ Cualquier duda rogamos enviarla a roboligavirtual@gmail.com.
 Las características de la competencia con las siguientes:
  
 * Se establecen tres categorías de competencia: 
-  1. Categoría Infantil: para equipos cuyo participante de mayor edad tenga a lo sumo 12 años el 01/07/2024. Ningún participante puede tener menos de 9 años al 01/07/2024.
-  2. Categoría Juvenil: para equipos cuyo participante de mayor edad tenga a lo sumo 18 años el 01/07/2024.
+  1. Categoría Infantil: para equipos cuyo participante de mayor edad tenga a lo sumo 12 años el 01/07/2025. Ningún participante puede tener menos de 9 años al 01/07/2025.
+  2. Categoría Juvenil: para equipos cuyo participante de mayor edad tenga a lo sumo 18 años el 01/07/2025.
   3. Categoría Libre:  para equipos de cualquier edad (pueden anotarse en esta categoría aunque cumplan con los requisitos de alguna de las otras dos)
 
 * __Cada integrante sólo puede formar parte de un equipo.__
@@ -30,7 +30,7 @@ La entrega de los equipos debe realizarse de una de las siguientes formas:
 1. Si compite con el robot estándar, con un UNICO archivo de extensión .py.
 2. Si compute con un robot personalizado, con DOS archivos. Uno de extensión .py, y el otro de extensión .json. 
  
-Estos equipos deben entregarse dentro de una carpeta de Google Drive QUE SE TE INFORMARÁ EL DÍA 31/08/2024. Todos los sábados a las 0:00 un sistema automático levantará el primer archivo .py que encuentre dentro de esa carpeta, y si hay personalización, el primer .json. Asegúrense de que hay un único archivo de cada extensión para que lo levante correctamente. _Aquellos equipos que no tengan archivos subidos para la primera ronda, quedarán automáticamente fuera de la competencia. __Por lo tanto, es fundamental que subas tu equipo.___
+Estos equipos deben entregarse dentro de una carpeta de Google Drive QUE SE TE INFORMARÁ EL DÍA 06/09/2025. Todos los sábados a las 0:00 un sistema automático levantará el primer archivo .py que encuentre dentro de esa carpeta, y si hay personalización, el primer .json. Asegúrense de que hay un único archivo de cada extensión para que lo levante correctamente. _Aquellos equipos que no tengan archivos subidos para la primera ronda, quedarán automáticamente fuera de la competencia. __Por lo tanto, es fundamental que subas tu equipo.___
 
 ___Por lo tanto, cada semana puedes modificar tu código para competir en la ronda correspondiente. ¡No importa si te fue mal en una ronda, la próxima tienes revancha!___
 

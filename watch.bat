@@ -1,1 +1,1 @@
-nodemon --exec "ssgr.exe -v src docs" --ext "*" --watch src
+nodemon --exec "ssgr.exe -v src e:\\wamp64\\www\\roboligaVirtual\\" --ext "*" --watch src

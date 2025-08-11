@@ -12,4 +12,4 @@
 * [Equipos de ejemplo](https://github.com/GIRA/rsexamples)
 
 #### Rescate
-* [Ambiente de simulación para Rescate (Erebus v24.1.0)](https://github.com/robocup-junior/erebus/releases/tag/v24.1.0)
+* [Ambiente de simulación para Rescate (Erebus v25.0.1)](https://github.com/robocup-junior/erebus/releases/tag/v25.0.1)

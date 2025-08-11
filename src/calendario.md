@@ -1,3 +1,3 @@
 # Calendario
 
-TBD
+*A definir cuando estén inscriptos los equipos*

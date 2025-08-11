@@ -2,7 +2,7 @@
 (require '[clojure.string :as str])
 (declare carousel carousel-slide featurette columns)
 
-(let [title "Roboliga Virtual 2024"
+(let [title "Roboliga Virtual 2025"
       subtitle "El primer campeonato latinoamericano de \\
                 Sumo, Fútbol Robótico y Rescate Robocup \\
                 para todas las edades"
@@ -23,8 +23,9 @@
 
 
 [:div.py-4.text-center.fs-3.bg-black
- [:p "¿Querés defender el Primer Puesto en Rescue Sim en Robocup 2025? ¡No dejes de inscribirte en Rescate!"]
- [:img.w-50 {:src "imgs/rescuesim.png"}]] 
+ [:p "¿Querés defender el Primer Puesto en Rescue Sim en Robocup 2026? ¡No dejes de inscribirte en Rescate!"]
+ [:p[:img.w-50 {:src "imgs/rescuesim.png"}]]
+ [:p[:img.w-50 {:src "imgs/noticiaAmerica.png"}]]] 
 
 
 [:div.py-4.text-center.fs-2.bg-dark-subtle.border-top.border-bottom
@@ -32,7 +33,7 @@
   [:p (ssgr/markdown "__¡YA ESTÁ ABIERTA LA INSCRIPCIÓN!__")]
   [:p "¡Podés entrar a un nuevo mundo presionando este "
    [:a.btn.btn-primary {:href "https://forms.gle/yzXEzFLuhfFW8Frv5" :role "button"} "botón"] "!"]
-  [:p (ssgr/markdown "___LA INSCRIPCIÓN CIERRA EL VIERNES 30/8 A LAS 23:59 (UTC -3)___")]
+  [:p (ssgr/markdown "___LA INSCRIPCIÓN CIERRA EL VIERNES 05/09/2025 A LAS 23:59 (UTC -3)___")]
   [:p (ssgr/markdown "_TODA LA INFORMACION SE PROVEERÁ POR EL SERVIDOR DE DISCORD. \\
 Por lo tanto, sumate YA al [Discord de la Roboliga](https://discord.com/invite/SZ24uFV6sq)_")]]]
 

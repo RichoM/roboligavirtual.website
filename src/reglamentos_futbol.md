@@ -1,7 +1,7 @@
 
 # Reglamento de Fútbol Robótico Virtual
  
-__Este conjunto de reglas se utilizará únicamente para la competencia Roboliga Virtual 2024__
+__Este conjunto de reglas se utilizará únicamente para la competencia Roboliga Virtual 2025__
 
 ### 1. JUEGO
  
@@ -147,7 +147,7 @@ Durante una entrevista, al menos un miembro de cada equipo debe poder explicar p
  
 La entrega de los equipos debe realizarse mediante un archivo .zip que contenga el código fuente y todos los elementos necesarios para la ejecución del programa en el lenguaje seleccionado. NO DEBE HABER NINGÚN ARCHIVO BINARIO EJECUTABLE DENTRO DEL .ZIP.
  
-Estos equipos deben entregarse dentro de la carpeta de Google Drive que ___SERÁ INFORMADA EL DÍA 31/08/2024___. El sistema automático levantará el primer archivo .zip que encuentre dentro de esa carpeta. Asegúrense de que hay un único archivo para que lo levante correctamente. 
+Estos equipos deben entregarse dentro de la carpeta de Google Drive que ___SERÁ INFORMADA EL DÍA 06/09/2025___. El sistema automático levantará el primer archivo .zip que encuentre dentro de esa carpeta. Asegúrense de que hay un único archivo para que lo levante correctamente. 
 
 ___Aquellos equipos que no tengan archivos subidos para la primera ronda, quedarán automáticamente fuera de la competencia. Por lo tanto, es fundamental que subas tu equipo.___
 
